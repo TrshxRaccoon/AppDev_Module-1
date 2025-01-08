@@ -1,0 +1,50 @@
+# Palkeoramix decompiler. 
+
+const unknown53e98b64 = 32, 51, 0xfe57656c636f6d6520746f207468652063616c63756c61746f722e205965732c206974206973206d616465206279206d65203a, mem
+
+def storage:
+  result is uint256 at storage 0
+
+def getResult() payable: 
+  return result
+
+#
+#  Regular functions
+#
+
+def _fallback() payable: # default function
+  revert
+
+def add(uint256 _a, uint256 _b) payable: 
+  require calldata.size - 4 >=ΓÇ▓ 64
+  require _a == _a
+  require _b == _b
+  if _a > _a + _b:
+      revert with 'NH{q', 17
+  result = _a + _b
+
+def sub(uint256 _a, uint256 _b) payable: 
+  require calldata.size - 4 >=ΓÇ▓ 64
+  require _a == _a
+  require _b == _b
+  if _a - _b > _a:
+      revert with 'NH{q', 17
+  result = _a - _b
+
+def mul(uint256 _a, uint256 _b) payable: 
+  require calldata.size - 4 >=ΓÇ▓ 64
+  require _a == _a
+  require _b == _b
+  if _a and _b != _a * _b / _a:
+      revert with 'NH{q', 17
+  result = _a * _b
+
+def div(uint256 _a, uint256 _b) payable: 
+  require calldata.size - 4 >=ΓÇ▓ 64
+  require _a == _a
+  require _b == _b
+  if _b <= 0:
+      revert with 0x8c379a000000000000000000000000000000000000000000000000000000000, 'The second parameter should not be 0'
+  if not _b:
+      revert with 'NH{q', 18
+  result = _a / _b
